@@ -16,7 +16,7 @@ function createPromise(position, delay) {
 const promisesForm = document.querySelector('form.form');
 
 promisesForm.addEventListener('submit', ev => {
-  ev.preventDefault;
+  ev.preventDefault();
   const { elements } = ev.currentTarget;
   const delay = Number(elements.delay.value);
   const step = Number(elements.step.value);
@@ -31,6 +31,6 @@ promisesForm.addEventListener('submit', ev => {
       .catch(({ position, delay }) => {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
-    currentDelay =+ step;
+    currentDelay += step;
   }
 });
